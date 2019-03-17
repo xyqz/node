@@ -1,0 +1,113 @@
+// $color:#0ff;
+// .box1{
+//     background: $color - 100;
+// }
+
+
+
+
+// $color:#0f0 #ff0;
+// .box1{
+//     background: nth($color,1);
+// }
+// .box2{
+//     background: nth($color,2);
+// }
+
+
+
+
+// $list:(box1 100 100 #00f)(box2 200 100 #ff0)(box3 300 100 #f0f)(box4 400 100 #0f0);
+// @each $a,$w,$h,$c in $list {
+//     .#{$a}{
+//         width:$w + px;
+//         height:$h + px;
+//         background:$c
+//     }
+// }
+
+
+
+// $map:(box1:pink,box2:blue,box3:yellow);
+// @each $key,$value in $map {
+//     .#{$key}{
+//         width:100px;
+//         height:100px;
+//         background: $value;
+//     }
+// }
+
+
+
+// #list{
+//     li{
+//         border-bottom: solid 1px black
+//     }
+//     .last{
+//         border: none;
+//         &:hover{
+//             background: yellow
+//         }
+//     }
+// }
+
+// .box1,.box2,.box3,.box4{
+//     width:150px;height: 30px;
+//     margin: 20px 0;
+//     background: pink;
+// }
+
+
+// @mixin transform ($r){
+//     -webkit-transform: $r;
+//     -moz-transform: $r;
+//     -ms-transform: $r;
+//     -o-transform: $r;
+//     transform: $r;
+// }
+// .box1{
+//     @include transform(rotate(50deg));
+// }
+// .box2{
+//     @include transform(translate(50px));
+// }
+// .box3{
+//     @include transform(scale(1.5));
+// }
+
+
+
+// .box1{
+//     width:100px;height:100px;
+//     background: yellow;
+// }
+// .box2{
+//     @extend .box1;
+//     background:pink;
+//     color: yellow;
+// }
+// .box3{
+//     @extend .box2;
+//     background: blue
+// }
+
+
+
+$fontSize:50px;
+html{
+    font-size: $fontSize;
+}
+@function p2r($px){
+    @return $px/$fontSize*1rem;
+}
+.box1{
+    width:p2r(200px);
+    height:p2r(100px);
+    background: yellow
+}
+
+@import "test.scss";
+
+
+
+
